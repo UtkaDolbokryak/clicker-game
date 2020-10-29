@@ -3,12 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cliker-game</title>
+    <title>clicker-game</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>Колличество очков</div>
-    <span id="points">0</span> <br />
-    <button id="upgrade">УЛУЧШИТЬ</button>
+    <div>
+      Количество очков:
+      <span id="points">0</span>
+    </div>
+    <div>
+      Количество очков в секунду:
+      <span id="points-per-second">1</span>
+    </div>
+    <div>
+      <input
+        id="upgrade-ppt-btn"
+        type="button"
+        value="Улучшить количество очков за тик"
+      />
+      Цена:
+      <span id="upgrade-ppt-price">50</span>
+    </div>
+    <div>
+      <input
+        id="upgrade-time-interval-btn"
+        type="button"
+        value="Уменьшить интервал"
+      />
+      Цена:
+      <span id="upgrade-time-interval-price">50</span>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
