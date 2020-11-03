@@ -1,8 +1,8 @@
 let points = 0;
 let pointsPerTick = 1;
+let timeInterval = 1000;
 let upgradePrice = 50;
 let intervalUpgradePrice = 50;
-let timeInterval = 1000;
 let upgradeBtn = document.getElementById("upgrade-ppt-btn");
 let upgradeIntervalBtn = document.getElementById("upgrade-time-interval-btn");
 
@@ -22,8 +22,10 @@ function upgradePointsPerTick() {
     points -= upgradePrice;
     upgradePrice *= 2;
     ++pointsPerTick;
+
     let pps = (1000 * pointsPerTick) / timeInterval;
     pps = Math.round(pps * 100) / 100;
+
     document.getElementById("upgrade-ppt-price").innerText = upgradePrice;
     document.getElementById("points-per-second").innerText = pps;
     document.getElementById("points").innerText = points;
@@ -35,8 +37,10 @@ function upgradeTimeInterval() {
     points -= intervalUpgradePrice;
     intervalUpgradePrice *= 2;
     timeInterval *= 0.8;
+
     let pps = (1000 * pointsPerTick) / timeInterval;
     pps = Math.round(pps * 100) / 100;
+
     document.getElementById(
       "upgrade-time-interval-price"
     ).innerText = intervalUpgradePrice;
@@ -51,4 +55,5 @@ function upgradeTimeInterval() {
 document.onkeypress = keyPressHandler;
 upgradeBtn.onclick = upgradePointsPerTick;
 upgradeIntervalBtn.onclick = upgradeTimeInterval;
+
 let interval = setInterval(increasePoints, timeInterval);

@@ -1,5 +1,53 @@
 body {
+  margin: 0;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  background-image: url("img/Village.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.board {
+  font-family: "Comic Sans MS";
+  font-size: 20pt;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  background-image: url("img/board.jpg");
+  background-size: contain;
+  height: 900px;
+  padding: 0px 65px;
+}
+
+input {
+  font-family: "Comic Sans MS";
+  background-color: lightgreen;
+  border: 2px solid black;
+  font-size: 20pt;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.points-wrap {
+  line-height: 98px;
+}
+
+.pps-wrap {
+  line-height: 108px;
+}
+
+.upgrade-ppt-wrap {
+  height: 109px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upgrade-time-interval-wrap {
+  height: 108px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
